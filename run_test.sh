@@ -5,8 +5,17 @@ cd cmake-build
 cmake ../
 make
 
+if [[ ! -e test ]]; then
+    exit 1;
+fi
+
 echo "=============== Running UnitTests ================"
 cd test
-./unitTests
+
+if [[ ! -e unitTests ]]; then
+    exit 1;
+else
+    ./unitTests
+fi
 
 echo "=============== Finished!! ================"

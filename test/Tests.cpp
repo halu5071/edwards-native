@@ -3,7 +3,12 @@
  */
 
 #include <gtest/gtest.h>
+#include "../library.h"
 
 TEST(unitTests, test1) {
   EXPECT_EQ(1, 1);
+}
+
+TEST(unitTests, return_one) {
+  EXPECT_EQ(return_one(), 1);
 }
