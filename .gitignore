@@ -1,3 +1,4 @@
 .idea/
 cmake-build-debug/
 3rdparty/
+cmake-build/

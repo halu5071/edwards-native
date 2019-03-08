@@ -3,6 +3,6 @@ project(libpoint)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_library(libpoint library.cpp library.h)
+add_library(point library.cpp library.h)
 
 add_subdirectory(test)
