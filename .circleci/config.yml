@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+    - image: debian:stretch
+
+    steps:
+    - checkout
+
+    - run:
+        name: Set up
+        command: |
+          chmod u+x setup.sh
+          ./setup.sh
+
+    - run:
+        name: Google Test
+        command:
