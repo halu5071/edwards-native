@@ -1,11 +1,9 @@
 #include "library.h"
 
-#include <iostream>
+void scalar_mul(mpz_ptr dest, mpz_srcptr point_x, mpz_srcptr point_y, mpz_srcptr seed) {
 
-void hello() {
-  std::cout << "Hello, World!" << std::endl;
 }
 
-int return_one() {
-  return 1;
+static void add() {
+
 }

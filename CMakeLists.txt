@@ -4,7 +4,9 @@ project(point)
 set(CMAKE_CXX_STANDARD 11)
 include_directories("/usr/local/include")
 
-add_library(point
+set(CMAKE_MACOSX_RPATH 1)
+
+add_library(point SHARED
         library.cpp
         library.h)
 
