@@ -8,6 +8,10 @@ set(CMAKE_MACOSX_RPATH 1)
 
 add_library(point SHARED
         library.cpp
-        library.h)
+        library.h
+        binary_array.cpp
+        binary_array.h
+        point.cpp
+        point.h)
 
 add_subdirectory(test)
