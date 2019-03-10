@@ -11,10 +11,21 @@ TEST(unitTests, test1) {
 }
 
 TEST(unitTests, success) {
-  mpz_class number;
-  number.set_str("1234", 10);
+  mpz_class number1;
+  mpz_class number2;
+  number1.set_str("12", 10);
+  number2.set_str("124", 10);
 
-  int *array = nullptr;
+  std::vector<int> intVector1;
+  std::vector<int> intVector2;
 
-  to_binary_array(array, number);
+  int expect1[] = {1, 1, 0, 0};
+  int expect2[] = {1, 1, 1, 1, 1, 0, 0};
+  std::vector<int> expectedVector1(expect1, expect1 + sizeof(expect1) / sizeof(expect1[0]));
+  std::vector<int> expectedVector2(expect2, expect2 + sizeof(expect2) / sizeof(expect2[0]));
+  intVector1 = to_binary_vector(number1);
+  intVector2 = to_binary_vector(number2);
+
+  EXPECT_EQ(intVector1, expectedVector1);
+  EXPECT_EQ(intVector2, expectedVector2);
 }

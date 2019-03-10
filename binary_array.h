@@ -6,7 +6,8 @@
 #define POINT_BINARY_ARRAY_H
 
 #include <gmpxx.h>
+#include <vector>
 
-void to_binary_array(int *dest, mpz_class seed);
+std::vector<int> to_binary_vector(mpz_class seed);
 
 #endif //POINT_BINARY_ARRAY_H
