@@ -41,3 +41,19 @@ std::vector<int> to_binary_vector(mpz_class seed) {
   }
   return dest;
 }
+
+std::vector<int> to_mutual_opposite_form(mpz_class seed) {
+  auto tmp = to_binary_vector(seed);
+  unsigned long length = tmp.size();
+
+  std::vector<int> ternaryArray = std::vector<int>(length + 1);
+  ternaryArray[0] = tmp[0];
+
+  for (int i = 1; i < length; ++i) {
+    ternaryArray[i] = tmp[i] - tmp[i - 1];
+  }
+
+  ternaryArray[length] = -tmp[length - 1];
+
+  return ternaryArray;
+}

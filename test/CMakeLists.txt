@@ -18,7 +18,8 @@ add_executable(unitTests
         ../inverse.h
         ../inverse.cpp
         Tests.cpp
-        PointTest.cpp)
+        PointTest.cpp
+        ArrayTest.cpp)
 
 if (UNIX AND NOT APPLE)
     target_link_libraries(unitTests

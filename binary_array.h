@@ -10,4 +10,6 @@
 
 std::vector<int> to_binary_vector(mpz_class seed);
 
+std::vector<int> to_mutual_opposite_form(mpz_class seed);
+
 #endif //POINT_BINARY_ARRAY_H

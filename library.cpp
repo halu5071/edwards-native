@@ -6,11 +6,7 @@ mpz_class primePowerP = mpz_class("578960446186580977117854925043439539266349923
 mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", 10);
 
 void scalar_mul(mpz_ptr dest, mpz_srcptr point_x, mpz_srcptr point_y, mpz_srcptr seed) {
-  // zero init
-  zero.set_str("0", 10);
-  one.set_str("1", 10);
   // Origin init
-  ORIGIN = point{zero, one};
   mpz_class pointX(point_x);
   mpz_class pointY(point_y);
   mpz_class pointSeed(seed);
@@ -22,6 +18,8 @@ void scalar_mul(mpz_ptr dest, mpz_srcptr point_x, mpz_srcptr point_y, mpz_srcptr
     // TODO: Calculate
     v++;
   }
+
+  dest = pointX.__get_mp();
 }
 
 point add(point src1, point src2) {

@@ -14,8 +14,8 @@ typedef struct point {
 
 const int BASE = 10;
 
-static mpz_class zero;
-static mpz_class one;
-static point ORIGIN;
+static mpz_class zero = mpz_class("0", BASE);
+static mpz_class one = mpz_class("1", BASE);
+static point ORIGIN = point{zero, one};
 
 #endif //POINT_POINT_H
