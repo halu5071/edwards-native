@@ -12,6 +12,10 @@ typedef struct point {
     mpz_class y;
 } point;
 
+point add(point point1, point point2);
+
+point negateY(point point1);
+
 const int BASE = 10;
 
 static mpz_class zero = mpz_class("0", BASE);
