@@ -16,6 +16,9 @@ if [[ ! -e unitTests ]]; then
     exit 1;
 else
     ./unitTests
+    if [[ $? == 1 ]]; then
+        exit 1;
+    fi
 fi
 
 echo "=============== Finished!! ================"
