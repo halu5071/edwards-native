@@ -7,7 +7,7 @@
 #include "../point.h"
 #include "../binary_array.h"
 
-TEST(unitTests, success_add_ed25519point_1) {
+TEST(pointTest, success_add_ed25519point_1) {
   mpz_class point1X = mpz_class("10", BASE);
   mpz_class point1Y = mpz_class("20", BASE);
   mpz_class point2X = mpz_class("20", BASE);
@@ -28,7 +28,7 @@ TEST(unitTests, success_add_ed25519point_1) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_add_ed25519point_2) {
+TEST(pointTest, success_add_ed25519point_2) {
   mpz_class point1X = mpz_class("141", BASE);
   mpz_class point1Y = mpz_class("24", BASE);
   mpz_class point2X = mpz_class("23", BASE);
@@ -49,7 +49,7 @@ TEST(unitTests, success_add_ed25519point_2) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_add_ed25519point_3) {
+TEST(pointTest, success_add_ed25519point_3) {
   mpz_class point1X = mpz_class("13411", BASE);
   mpz_class point1Y = mpz_class("24312", BASE);
   mpz_class point2X = mpz_class("23423", BASE);
@@ -70,7 +70,7 @@ TEST(unitTests, success_add_ed25519point_3) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_add_ed25519point_4) {
+TEST(pointTest, success_add_ed25519point_4) {
   mpz_class point1X = mpz_class("93481", BASE);
   mpz_class point1Y = mpz_class("94823", BASE);
   mpz_class point2X = mpz_class("238534", BASE);
@@ -91,7 +91,7 @@ TEST(unitTests, success_add_ed25519point_4) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_add_ed25519point_5) {
+TEST(pointTest, success_add_ed25519point_5) {
   mpz_class point1X = mpz_class("20266806181347897178517736945403300566236311925948585575972021784256181966831", BASE);
   mpz_class point1Y = mpz_class("20852410506957026626210500909507772892959249564214740554270305643381675686982", BASE);
   mpz_class point2X = mpz_class("11675954373387894284288004270057647646117187555908725144338394611307421402153", BASE);
@@ -112,7 +112,7 @@ TEST(unitTests, success_add_ed25519point_5) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_add_ed25519point_6) {
+TEST(pointTest, success_add_ed25519point_6) {
   mpz_class point1X = mpz_class("55307901837819056100203421472284281626339181044463972151446027320031681414103", BASE);
   mpz_class point1Y = mpz_class("4592278534742875130003490239944802183338230954052483234431143871319686381534", BASE);
   mpz_class point2X = mpz_class("20266806181347897178517736945403300566236311925948585575972021784256181966831", BASE);
@@ -133,7 +133,7 @@ TEST(unitTests, success_add_ed25519point_6) {
   EXPECT_EQ(addedPointY.get_str(10), expectY.get_str(10));
 }
 
-TEST(unitTests, success_negateY) {
+TEST(pointTest, success_negateY) {
   mpz_class point1X = mpz_class("55307901837819056100203421472284281626339181044463972151446027320031681414103", BASE);
   mpz_class point1Y = mpz_class("4592278534742875130003490239944802183338230954052483234431143871319686381534", BASE);
   point point1{point1X, point1Y};

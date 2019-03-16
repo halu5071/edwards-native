@@ -7,6 +7,13 @@
 static mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", 10);
 static mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", 10);
 
+point negatePoint(point src) {
+  mpz_class minus = mpz_class("-1", BASE);
+  auto newX = src.x * minus;
+  auto newY = src.y * minus;
+  return point{newX, newY};
+}
+
 point negateY(point point1) {
   auto y = point1.y * mpz_class("-1", BASE);
   return point{point1.x, y};

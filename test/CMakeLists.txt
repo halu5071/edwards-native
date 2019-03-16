@@ -17,7 +17,7 @@ add_executable(unitTests
         ../binary_array.cpp
         ../inverse.h
         ../inverse.cpp
-        Tests.cpp
+        ScalarMultipleTests.cpp
         PointTest.cpp
         ArrayTest.cpp)
 

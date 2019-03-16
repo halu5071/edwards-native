@@ -14,6 +14,8 @@ typedef struct point {
 
 point add(point point1, point point2);
 
+point negatePoint(point src);
+
 point negateY(point point1);
 
 const int BASE = 10;

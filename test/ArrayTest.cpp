@@ -6,7 +6,7 @@
 #include "../binary_array.h"
 #include "../point.h"
 
-TEST(unitTests, success_to_binary) {
+TEST(arrayTest, success_to_binary) {
   mpz_class number1 = mpz_class("12", BASE);
   mpz_class number2 = mpz_class("124", BASE);
 
@@ -24,7 +24,7 @@ TEST(unitTests, success_to_binary) {
   EXPECT_EQ(intVector2, expectedVector2);
 }
 
-TEST(unitTests, success_to_mutual_opposite_form) {
+TEST(arrayTest, success_to_mutual_opposite_form) {
   mpz_class a = mpz_class("27", BASE);
   mpz_class b = mpz_class("11", BASE);
   mpz_class c = mpz_class("247", BASE);

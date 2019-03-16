@@ -17,11 +17,12 @@ void scalar_mul(mpz_ptr dest_x, mpz_ptr dest_y, mpz_srcptr point_x, mpz_srcptr p
   while (v != binaryArray.end()) {
     qs[0] = add(qs[0], qs[0]);
     point p = add(qs[0], rs[1 - *v]);
-    qs[1] = negateY(p);
+    qs[1] = negatePoint(p);
     qs[0] = qs[abs(*v)];
     v++;
   }
 
-  dest_x = qs[0].x.__get_mp();
-  dest_y = qs[0].y.__get_mp();
+  qs[0].x.__get_mp();
+  mpz_init_set(dest_x, qs[0].x.__get_mp());
+  mpz_init_set(dest_y, qs[0].y.__get_mp());
 }
