@@ -20,8 +20,8 @@ point negateY(point point1);
 
 const int BASE = 10;
 
-static mpz_class zero = mpz_class("0", BASE);
-static mpz_class one = mpz_class("1", BASE);
-static point ORIGIN = point{zero, one};
+static const mpz_class zero = mpz_class("0", BASE);
+static const mpz_class one = mpz_class("1", BASE);
+static const point ORIGIN = point{zero, one};
 
 #endif //POINT_POINT_H

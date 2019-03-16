@@ -32,12 +32,11 @@ static int ctoi(char c) {
 }
 
 std::vector<int> to_binary_vector(mpz_class seed) {
-  const char *chars = seed.get_str(2).c_str();
+  std::string str = seed.get_str(2);
   std::vector<int> dest;
-  while (*chars) {
-    int i = ctoi(*chars);
-    dest.push_back(i);
-    chars++;
+  for (int j = 0; j < str.size(); ++j) {
+    char c = str[j];
+    dest.push_back(ctoi(c));
   }
   return dest;
 }

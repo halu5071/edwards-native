@@ -45,11 +45,11 @@ point add(point src1, point src2) {
   mpz_class x3 = E * F * inverseZ3 % primePowerP;
   mpz_class y3 = G * H * inverseZ3 % primePowerP;
 
-  if (x3 < 0) {
+  if (sgn(x3) < 0) {
     x3 = x3 + primePowerP;
   }
 
-  if (y3 < 0) {
+  if (sgn(y3) < 0) {
     y3 = y3 + primePowerP;
   }
 
