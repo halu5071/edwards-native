@@ -10,7 +10,7 @@ TEST(unitTests, test1) {
   EXPECT_EQ(1, 1);
 }
 
-TEST(unitTests, success) {
+TEST(unitTests, success_to_binary) {
   mpz_class number1;
   mpz_class number2;
   number1.set_str("12", 10);

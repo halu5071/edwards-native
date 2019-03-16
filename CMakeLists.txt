@@ -14,7 +14,9 @@ add_library(point SHARED
         binary_array.cpp
         binary_array.h
         point.cpp
-        point.h)
+        point.h
+        inverse.cpp
+        inverse.h)
 
 if (UNIX AND NOT APPLE)
     target_link_libraries(point

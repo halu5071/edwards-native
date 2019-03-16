@@ -5,14 +5,17 @@
 #ifndef POINT_POINT_H
 #define POINT_POINT_H
 
-#include <gmp.h>
+#include <gmpxx.h>
 
 typedef struct point {
-    mpz_ptr x;
-    mpz_ptr y;
+    mpz_class x;
+    mpz_class y;
 } point;
 
-static mpz_ptr zero;
+const int BASE = 10;
+
+static mpz_class zero;
+static mpz_class one;
 static point ORIGIN;
 
 #endif //POINT_POINT_H

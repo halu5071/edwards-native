@@ -9,13 +9,16 @@ include_directories("/usr/local/include")
 include_directories("${GTEST_ROOT}/include")
 
 add_executable(unitTests
-        ../library.cpp
         ../library.h
+        ../library.cpp
         ../point.h
         ../point.cpp
         ../binary_array.h
         ../binary_array.cpp
-        Tests.cpp)
+        ../inverse.h
+        ../inverse.cpp
+        Tests.cpp
+        PointTest.cpp)
 
 if (UNIX AND NOT APPLE)
     target_link_libraries(unitTests
