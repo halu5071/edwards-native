@@ -12,16 +12,16 @@ typedef struct point {
     mpz_class y;
 } point;
 
+const int CARDINAL_10 = 10;
+
 point add(point point1, point point2);
 
 point negatePoint(point src);
 
 point negateY(point point1);
 
-const int BASE = 10;
-
-static const mpz_class zero = mpz_class("0", BASE);
-static const mpz_class one = mpz_class("1", BASE);
-static const point ORIGIN = point{zero, one};
+extern mpz_class ZERO;
+extern mpz_class ONE;
+extern point ORIGIN;
 
 #endif //POINT_POINT_H

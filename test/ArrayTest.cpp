@@ -7,10 +7,10 @@
 #include "../point.h"
 
 TEST(arrayTest, success_to_binary) {
-  mpz_class number1 = mpz_class("12", BASE);
-  mpz_class number2 = mpz_class("124", BASE);
-  mpz_class number3 = mpz_class("4194303", BASE);
-  mpz_class number4 = mpz_class("4194304", BASE);
+  mpz_class number1 = mpz_class("12", CARDINAL_10);
+  mpz_class number2 = mpz_class("124", CARDINAL_10);
+  mpz_class number3 = mpz_class("4194303", CARDINAL_10);
+  mpz_class number4 = mpz_class("4194304", CARDINAL_10);
 
   std::vector<int> intVector1;
   std::vector<int> intVector2;
@@ -40,10 +40,10 @@ TEST(arrayTest, success_to_binary) {
 }
 
 TEST(arrayTest, success_to_mutual_opposite_form_1) {
-  mpz_class a = mpz_class("27", BASE);
-  mpz_class b = mpz_class("11", BASE);
-  mpz_class c = mpz_class("247", BASE);
-  mpz_class d = mpz_class("327", BASE);
+  mpz_class a = mpz_class("27", CARDINAL_10);
+  mpz_class b = mpz_class("11", CARDINAL_10);
+  mpz_class c = mpz_class("247", CARDINAL_10);
+  mpz_class d = mpz_class("327", CARDINAL_10);
 
   auto vecA = to_mutual_opposite_form(a);
   auto vecB = to_mutual_opposite_form(b);
@@ -67,8 +67,8 @@ TEST(arrayTest, success_to_mutual_opposite_form_1) {
 }
 
 TEST(arrayTest, success_to_mutual_opposite_form_2) {
-  mpz_class a = mpz_class("4194303", BASE);
-  mpz_class b = mpz_class("4194304", BASE);
+  mpz_class a = mpz_class("4194303", CARDINAL_10);
+  mpz_class b = mpz_class("4194304", CARDINAL_10);
 
   auto vecA = to_mutual_opposite_form(a);
   auto vecB = to_mutual_opposite_form(b);

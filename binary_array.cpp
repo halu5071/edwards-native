@@ -2,6 +2,7 @@
  * Created by Yasunori Horii on 2019/03/09.
  */
 
+#include <stdlib.h>
 #include "binary_array.h"
 
 static int ctoi(char c) {
@@ -32,18 +33,17 @@ static int ctoi(char c) {
 }
 
 std::vector<int> to_binary_vector(mpz_class seed) {
-  std::string str = seed.get_str(2);
+  auto str = seed.get_str(2);
   std::vector<int> dest;
-  for (int j = 0; j < str.size(); ++j) {
-    char c = str[j];
+  for (char c : str) {
     dest.push_back(ctoi(c));
   }
   return dest;
 }
 
 std::vector<int> to_mutual_opposite_form(mpz_class seed) {
-  auto tmp = to_binary_vector(seed);
-  unsigned long length = tmp.size();
+  auto tmp = to_binary_vector(std::move(seed));
+  auto length = tmp.size();
 
   std::vector<int> ternaryArray = std::vector<int>(length + 1);
   ternaryArray[0] = tmp[0];

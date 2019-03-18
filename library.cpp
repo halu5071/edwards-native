@@ -1,8 +1,12 @@
+/*
+ * Created by Yasunori Horii on 2019/03/09.
+ */
+
 #include "library.h"
 #include "point.h"
 #include "binary_array.h"
 
-static mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", 10);
+static const mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", CARDINAL_10);
 
 void scalar_mul(mpz_ptr dest_x, mpz_ptr dest_y, mpz_srcptr point_x, mpz_srcptr point_y, mpz_srcptr seed) {
   mpz_class pointX(point_x);

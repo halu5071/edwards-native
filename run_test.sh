@@ -1,5 +1,9 @@
 #!/bin/bash
 echo "=============== Building UnitTests ================"
+if [[ -e cmake-build ]]; then
+  echo "delete build dir"
+	rm -rf cmake-build
+fi
 mkdir cmake-build
 cd cmake-build
 cmake ../

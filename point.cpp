@@ -4,8 +4,12 @@
 #include "point.h"
 #include "inverse.h"
 
-static mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", 10);
-static mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", 10);
+static const mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", 10);
+static const mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", 10);
+
+mpz_class ZERO = mpz_class("0", CARDINAL_10);
+mpz_class ONE = mpz_class("1", CARDINAL_10);
+point ORIGIN = point{ZERO, ONE};
 
 point negatePoint(point src) {
   mpz_ptr srcX = src.x.__get_mp();
@@ -42,7 +46,6 @@ point add(point src1, point src2) {
 
   mpz_class Z3 = F * G % primePowerP;
 
-  mpz_class one = mpz_class("1", 10);
   mpz_class inverseZ3 = inverse(Z3, primePowerP);
   mpz_class x3 = E * F * inverseZ3 % primePowerP;
   mpz_class y3 = G * H * inverseZ3 % primePowerP;
