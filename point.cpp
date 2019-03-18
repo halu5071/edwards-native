@@ -8,15 +8,17 @@ static mpz_class primePowerP = mpz_class("57896044618658097711785492504343953926
 static mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", 10);
 
 point negatePoint(point src) {
-  mpz_class minus = mpz_class("-1", BASE);
-  auto newX = src.x * minus;
-  auto newY = src.y * minus;
-  return point{newX, newY};
+  mpz_ptr srcX = src.x.__get_mp();
+  mpz_ptr srcY = src.y.__get_mp();
+  mpz_neg(srcX, srcX);
+  mpz_neg(srcY, srcY);
+  return point{mpz_class(srcX), mpz_class(srcY)};
 }
 
 point negateY(point point1) {
-  auto y = point1.y * mpz_class("-1", BASE);
-  return point{point1.x, y};
+  mpz_ptr src = point1.y.__get_mp();
+  mpz_neg(src, src);
+  return point{point1.x, mpz_class(src)};
 }
 
 point add(point src1, point src2) {
