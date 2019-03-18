@@ -18,3 +18,8 @@ jobs:
         command: |
           chmod u+x run_test.sh
           ./run_test.sh
+    - store_test_results:
+        path: /cmake-build
+    - store_artifacts:
+        path: /cmake-build/libpoint.so
+        destination: artifact-file
