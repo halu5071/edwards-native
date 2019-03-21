@@ -9,23 +9,23 @@ set(CMAKE_MACOSX_RPATH 1)
 set(PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_library(point SHARED
-        library.cpp
-        library.h
-        binary_array.cpp
-        binary_array.h
-        point.cpp
-        point.h
-        inverse.cpp
-        inverse.h)
+		library.cpp
+		library.h
+		binary_array.cpp
+		binary_array.h
+		point.cpp
+		point.h
+		inverse.cpp
+		inverse.h)
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(point
-            ${PROJECT_ROOT}/lib/linux-x86-64/libgmp.so)
+	target_link_libraries(point
+			${PROJECT_ROOT}/lib/linux-x86-64/libgmp.so)
 endif (UNIX AND NOT APPLE)
 
 if (APPLE)
-    target_link_libraries(point
-            ${PROJECT_ROOT}/lib/darwin/libgmp.dylib)
+	target_link_libraries(point
+			${PROJECT_ROOT}/lib/darwin/libgmp.dylib)
 endif (APPLE)
 
 add_subdirectory(test)

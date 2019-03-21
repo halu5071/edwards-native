@@ -2,19 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-    - image: halu5071/edwards-doc:1.8
+      - image: halu5071/edwards-doc:1.8
 
     steps:
-    - checkout
+      - checkout
 
-    - run:
-        name: Set up
-        command: |
-          chmod u+x setup.sh
-          ./setup.sh
+      - run:
+          name: Set up
+          command: |
+            chmod u+x setup.sh
+            ./setup.sh
 
-    - run:
-        name: Google Test
-        command: |
-          chmod u+x run_test.sh
-          ./run_test.sh
+      - run:
+          name: Google Test
+          command: |
+            chmod u+x run_test.sh
+            ./run_test.sh
