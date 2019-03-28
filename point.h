@@ -8,8 +8,8 @@
 #include <gmpxx.h>
 
 typedef struct point {
-		mpz_class x;
-		mpz_class y;
+    mpz_class x;
+    mpz_class y;
 } point;
 
 const int CARDINAL_10 = 10;
