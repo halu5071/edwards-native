@@ -11,8 +11,8 @@ include_directories("${GTEST_ROOT}/include")
 add_executable(unitTests
 		../library.h
 		../library.cpp
-		../point.h
-		../point.cpp
+		../point_curve25519.h
+		../point_curve25519.cpp
 		../binary_array.h
 		../binary_array.cpp
 		../inverse.h

@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 #include "../library.h"
-#include "../point.h"
+#include "../point_curve25519.h"
 
 static point basePoint{
 	mpz_class("15112221349535400772501151409588531511454012693041857206046113283949847762202", CARDINAL_10),

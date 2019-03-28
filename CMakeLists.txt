@@ -13,8 +13,8 @@ add_library(point SHARED
 		library.h
 		binary_array.cpp
 		binary_array.h
-		point.cpp
-		point.h
+		point_curve25519.cpp
+		point_curve25519.h
 		inverse.cpp
 		inverse.h)
 

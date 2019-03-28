@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 #include "../library.h"
-#include "../point.h"
+#include "../point_curve25519.h"
 #include "../binary_array.h"
 
 TEST(pointTest, success_add_ed25519point_1) {

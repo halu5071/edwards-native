@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 #include "../binary_array.h"
-#include "../point.h"
+#include "../point_curve25519.h"
 
 TEST(arrayTest, success_to_binary) {
 	mpz_class number1 = mpz_class("12", CARDINAL_10);

@@ -3,7 +3,7 @@
  */
 
 #include "library.h"
-#include "point.h"
+#include "point_curve25519.h"
 #include "binary_array.h"
 
 static const mpz_class primePowerP = mpz_class(

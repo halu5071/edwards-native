@@ -1,13 +1,13 @@
 /*
  * Created by Yasunori Horii on 2019/03/09.
  */
-#include "point.h"
+#include "point_curve25519.h"
 #include "inverse.h"
 
-static const mpz_class primePowerP = mpz_class(
-  "57896044618658097711785492504343953926634992332820282019728792003956564819949", 10);
-static const mpz_class d = mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555",
-                                     10);
+static const mpz_class primePowerP =
+  mpz_class("57896044618658097711785492504343953926634992332820282019728792003956564819949", CARDINAL_10);
+static const mpz_class d =
+  mpz_class("37095705934669439343138083508754565189542113879843219016388785533085940283555", CARDINAL_10);
 
 mpz_class ZERO = mpz_class("0", CARDINAL_10);
 mpz_class ONE = mpz_class("1", CARDINAL_10);
